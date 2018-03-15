@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import TextField from 'material-ui/TextField'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 
 const propTypes = {
   changeOnKeyDown: PropTypes.bool,
@@ -43,27 +43,23 @@ export default class TextareaComponent extends React.Component {
   }
   render () {
     return (
-        <TextField
-            ref='input'
-            fullWidth={true}
-            multiLine={true}
-            value={this.state.value || ''}
-            floatingLabelText={this.props.useHint ? null : this.props.label}
-            hintText={this.props.useHint ? this.props.label : null}
-            errorText={this.props.errorMessage}
-            disabled={this.props.disabled}
-            onChange={this.onChange.bind(this)}
-            onKeyDown={this.onKeyDown.bind(this)}
-            onBlur={this.onBlur.bind(this)}
-            {...this.props.passProps} />
+      <TextField
+        ref='input'
+        fullWidth
+        multiLine
+        value={this.state.value || ''}
+        floatingLabelText={this.props.useHint ? null : this.props.label}
+        hintText={this.props.useHint ? this.props.label : null}
+        errorText={this.props.errorMessage}
+        disabled={this.props.disabled}
+        onChange={this.onChange.bind(this)}
+        onKeyDown={this.onKeyDown.bind(this)}
+        onBlur={this.onBlur.bind(this)}
+        {...this.props.passProps}
+      />
     )
   }
 }
 
 TextareaComponent.propTypes = propTypes
 TextareaComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'textarea',
-  component: TextareaComponent
-})

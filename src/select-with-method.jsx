@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import AutoComplete from 'material-ui/AutoComplete'
 import MenuItem from 'material-ui/MenuItem'
 import _ from 'underscore'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 import Chip from 'material-ui/Chip'
 import * as Colors from 'material-ui/styles/colors'
 import Avatar from 'material-ui/Avatar'
@@ -333,8 +333,3 @@ export default class SelectWithMethodComponent extends React.Component {
 
 SelectWithMethodComponent.propTypes = propTypes
 SelectWithMethodComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'select-with-method',
-  component: SelectWithMethodComponent
-})

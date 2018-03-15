@@ -1,6 +1,6 @@
 import React from 'react'
 import DatePicker from 'material-ui/DatePicker'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 
 const propTypes = {
   ...FieldType.propTypes
@@ -21,15 +21,16 @@ export default class DatePickerComponent extends React.Component {
     return (
       <div onTouchTap={this.openDialog.bind(this)}>
         <DatePicker
-        ref='input'
-        fullWidth
-        value={this.props.value}
-        floatingLabelText={this.props.useHint ? null : this.props.label}
-        hintText={this.props.useHint ? this.props.label : null}
-        errorText={this.props.errorMessage}
-        disabled={this.props.disabled}
-        onChange={(_, date) => this.props.onChange(date)}
-        {...this.props.passProps} />
+          ref='input'
+          fullWidth
+          value={this.props.value}
+          floatingLabelText={this.props.useHint ? null : this.props.label}
+          hintText={this.props.useHint ? this.props.label : null}
+          errorText={this.props.errorMessage}
+          disabled={this.props.disabled}
+          onChange={(_, date) => this.props.onChange(date)}
+          {...this.props.passProps}
+        />
       </div>
     )
   }
@@ -37,8 +38,3 @@ export default class DatePickerComponent extends React.Component {
 
 DatePickerComponent.propTypes = propTypes
 DatePickerComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'date-picker',
-  component: DatePickerComponent
-})

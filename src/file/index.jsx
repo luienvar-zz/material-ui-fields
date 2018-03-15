@@ -80,7 +80,7 @@ const defaultProps = {
   delete: ({ file, onReady, onError }) => onReady()
 }
 
-export default class Component extends React.Component {
+export default class File extends React.Component {
 
   constructor (props) {
     super(props)
@@ -255,10 +255,5 @@ export default class Component extends React.Component {
   }
 }
 
-Component.propTypes = propTypes
-Component.defaultProps = defaultProps
-
-registerType({
-  type: 'file',
-  component: Component
-})
+File.propTypes = propTypes
+File.defaultProps = defaultProps

@@ -1,6 +1,6 @@
 import React from 'react'
 import TextField from 'material-ui/TextField'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 import styles from './styles'
 import _ from 'underscore'
 
@@ -71,13 +71,3 @@ export default class StringArrayComponent extends React.Component {
 
 StringArrayComponent.propTypes = propTypes
 StringArrayComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'string-array',
-  component: StringArrayComponent
-})
-
-registerType({
-  type: 'tags',
-  component: StringArrayComponent
-})

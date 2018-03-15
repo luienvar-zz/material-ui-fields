@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 import _ from 'underscore'
 
 const propTypes = {
@@ -77,8 +77,3 @@ export default class SelectComponent extends React.Component {
 
 SelectComponent.propTypes = propTypes
 SelectComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'select',
-  component: SelectComponent
-})

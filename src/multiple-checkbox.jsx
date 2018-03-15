@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Checkbox from 'material-ui/Checkbox'
 import * as Colors from 'material-ui/styles/colors'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 import styles from './styles'
 import _ from 'underscore'
 
@@ -26,7 +26,7 @@ const defaultProps = {
 
 }
 
-export default class MultipleCheckboxComponent extends React.Component {
+export default class MultipleCheckbox extends React.Component {
 
   onCheck (value, currentVal) {
     var newVal = []
@@ -74,10 +74,5 @@ export default class MultipleCheckboxComponent extends React.Component {
   }
 }
 
-MultipleCheckboxComponent.propTypes = propTypes
-MultipleCheckboxComponent.defaultProps = defaultProps
-
-registerType({
-  type: 'multiple-checkbox',
-  component: MultipleCheckboxComponent
-})
+MultipleCheckbox.propTypes = propTypes
+MultipleCheckbox.defaultProps = defaultProps

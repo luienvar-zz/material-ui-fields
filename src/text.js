@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import TextField from 'material-ui/TextField'
-import {FieldType, registerType} from 'simple-react-form'
+import {FieldType} from 'simple-react-form'
 
 const propTypes = {
   ...FieldType.propTypes,
@@ -74,43 +74,23 @@ export default class TextFieldComponent extends React.Component {
 TextFieldComponent.propTypes = propTypes
 TextFieldComponent.defaultProps = defaultProps
 
-registerType({
-  type: 'text',
-  component: TextFieldComponent
-})
-
-class StringFieldComponent extends TextFieldComponent {
+export class StringFieldComponent extends TextFieldComponent {
   constructor (props) {
     super(props)
     this.type = 'text'
   }
 }
 
-registerType({
-  type: 'string',
-  component: StringFieldComponent
-})
-
-class NumberFieldComponent extends TextFieldComponent {
+export class NumberFieldComponent extends TextFieldComponent {
   constructor (props) {
     super(props)
     this.type = 'number'
   }
 }
 
-registerType({
-  type: 'number',
-  component: NumberFieldComponent
-})
-
-class DateFieldComponent extends TextFieldComponent {
+export class DateFieldComponent extends TextFieldComponent {
   constructor (props) {
     super(props)
     this.type = 'date'
   }
 }
-
-registerType({
-  type: 'date',
-  component: DateFieldComponent
-})
