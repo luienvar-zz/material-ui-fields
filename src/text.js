@@ -54,6 +54,7 @@ export default class TextFieldComponent extends React.Component {
     var fieldType = this.props.fieldType || this.type || 'text'
     return (
       <TextField
+        key={this.props.label}
         ref='input'
         fullWidth
         value={typeof this.props.value !== 'undefined' ? this.props.value : ''}
